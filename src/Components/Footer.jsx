@@ -1,3 +1,3 @@
-export default function Footer(){
-    
-}
+import React from "react";
+
+export default function Footer() {}

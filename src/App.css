@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.carousel-img, .carousel-item{
+  width: 1200px;
+  height: 450px;
+  object-fit: cover;
+}
+.carousel-img{
+  filter: brightness(50%);
+}

@@ -16,19 +16,4 @@ export async function getPosts(){
 	}
 }
 
-export async function getImgs() {
-	try {
-		const res = await axios.get(
-			`https://cdn.contentful.com/spaces/bicmbwrww2bh/entries?access_token=tNiGC3b1I64hpUi6pqo6CLuLcn-kJGF_l2RFE3NYDqk`
-		);
-		if (res.status === 200) {
-			const imgs = await res.data.includes;
-			return imgs;
-		} else {
-			console.log("Request was not successful.");
-		}
-	} catch (err) {
-		console.log("Error fetching data:", err);
-	}
-}
 

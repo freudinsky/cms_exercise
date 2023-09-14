@@ -22,35 +22,32 @@ const Searchbar = () => {
     });
   }
 
-  <input
-    type="text"
-    placeholder="Search"
-    onChange={handleChange}
-    value={searchInput}
-  />;
+  return (
+    <>
+      <div className="tabelle">
+        <input
+          type="text"
+          placeholder="&#128270; Search "
+          onChange={handleSearch}
+          value={searchInput}
+        />
 
-  <div className="tabelle">
-    <input
-      type="text"
-      placeholder="Search"
-      onChange={handleChange}
-      value={searchInput}
-    />
+        <table>
+          <tr>
+            <th>Titel</th>
+            <th>Kinostart</th>
+          </tr>
 
-    <table>
-      <tr>
-        <th>Titel</th>
-        <th>Kinostart</th>
-      </tr>
-
-      {films.map((film, index) => {
-        <tr>
-          <td>{films.name}</td>
-          <td>{films.kinostart}</td>
-        </tr>;
-      })}
-    </table>
-  </div>;
+          {films.map((film, index) => {
+            <tr>
+              <td>{films.name}</td>
+              <td>{films.kinostart}</td>
+            </tr>;
+          })}
+        </table>
+      </div>
+      ;
+    </>
+  );
 };
-
 export default Searchbar;

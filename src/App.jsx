@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Searchbar from "./Components/Searchbar";
 import Navbar from "./Components/Navbar";
-import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
+import Overview from "./Components/Overview";
 
 function App() {
-
 	return (
 		<>
 			{/* <Navbar /> */}

@@ -8,7 +8,7 @@ export default function Slideshow({ posts }) {
 	const handleSelect = (selectedIndex) => {
 		setIndex(selectedIndex);
 	};
-	const postArr = posts.slice(0,3)
+	const postArr = posts.slice(0, 3);
 
 	function limitWords(text, limit) {
 		const words = text.split(" ");

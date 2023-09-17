@@ -18,14 +18,12 @@ export default function Overview() {
         fetchPosts()
     }, [])
 
-    console.log(posts)
-
     return (
 			<>
 				<Slideshow posts={posts} />
 				<div className="card-container">
 					{posts.map((post) => (
-						<PostCard key={post.id} post={post} />
+						<PostCard key={post.sys.id} post={post} />
 					))}
 				</div>
 			</>

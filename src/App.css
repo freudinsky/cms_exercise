@@ -39,6 +39,17 @@
 .carousel-img {
 	filter: brightness(35%);
 }
-.carousel-caption{
+.carousel-caption {
 	text-shadow: 0 0 15px black;
+}
+
+@media (max-width: 500px) {
+	.card {
+		width: 90%;
+	}
+	.carousel-img,
+	.carousel-item {
+		width: 100%;
+		height: 400px;
+	}
 }

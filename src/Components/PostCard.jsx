@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 
-
-export default function PostCard({post}){
+export default function PostCard({ post }) {
 	function limitWords(text, limit) {
 		const words = text.split(" ");
 		if (words.length > limit) {
@@ -8,10 +8,7 @@ export default function PostCard({post}){
 		}
 		return text;
 	}
-	const limitedHeading = limitWords(
-		post.fields.heading,
-		7
-	);
+	const limitedHeading = limitWords(post.fields.heading, 7);
 	const limitedText = limitWords(
 		post.fields.postText.content[0].content[0].value,
 		20
@@ -19,7 +16,7 @@ export default function PostCard({post}){
 
 	return (
 		<>
-
+			<Link to={`/post/${post.sys.id}`} className="card-link">
 				<div className="card text-center">
 					<img
 						src={post.fields.imgUrl}
@@ -31,7 +28,7 @@ export default function PostCard({post}){
 						<p className="card-text">{limitedText}</p>
 					</div>
 				</div>
-
+			</Link>
 		</>
 	);
 }

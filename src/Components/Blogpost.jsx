@@ -19,15 +19,19 @@ export default function Blogpost() {
 		fetchPost(blogId);
 	}, []);
 
-  console.log("deine mudda",post)
+	console.log("deine mudda", post);
 
 	return (
 		<>
 			{post && post.length > 0 ? (
 				<div>
-					<h2>{post[0].fields.heading}</h2>
 					<img src={post[0].fields.imgUrl} alt="Post Image" />
-					<div> {post[0].fields.postText.content.map((p)=><p key={crypto.randomUUID()}>{p.content[0].value}</p>)} </div>
+					<h2>{post[0].fields.heading}</h2>
+					<div>
+						{post[0].fields.postText.content.map((p) => (
+							<p key={crypto.randomUUID()}>{p.content[0].value}</p>
+						))}{" "}
+					</div>
 				</div>
 			) : (
 				" "

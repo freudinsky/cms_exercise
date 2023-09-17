@@ -3,14 +3,16 @@ import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 export default function Slideshow({ posts }) {
-	  const [index, setIndex] = useState(0);
+	const [index, setIndex] = useState(0);
 
-		const handleSelect = (selectedIndex) => {
-			setIndex(selectedIndex);
-		};
+	const handleSelect = (selectedIndex) => {
+		setIndex(selectedIndex);
+	};
+	const postArr = posts.slice(0,3)
+
 	return (
 		<Carousel activeIndex={index} onSelect={handleSelect}>
-			{posts.map((post) => (
+			{postArr.map((post) => (
 				<Carousel.Item key={post.id} className="carousel-item">
 					<img className="carousel-img" src={post.fields.imgUrl} />
 					<Carousel.Caption>

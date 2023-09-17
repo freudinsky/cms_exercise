@@ -21,9 +21,13 @@ export default function Overview() {
     console.log(posts)
 
     return (
-        <>
-        <Slideshow posts={posts}/>
-
-        </>
-    )
+			<>
+				<Slideshow posts={posts} />
+				<div className="card-container">
+					{posts.map((post) => (
+						<PostCard key={post.id} post={post} />
+					))}
+				</div>
+			</>
+		);
 }

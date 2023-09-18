@@ -68,6 +68,23 @@
 }
 
 
+/* /////footer */
 
+
+  
+  .footer-icons {
+	font-size: 1.5em;
+	/* margin-left: 5%; */
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+  }
+  
+  .footer-icons .fa {
+	color: #fbd1cb;
+	text-decoration: none;
+  }
+  
+/* ////end of footer */
 
 /* /////// end of martas part  ///////// */

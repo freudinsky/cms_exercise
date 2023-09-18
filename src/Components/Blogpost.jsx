@@ -19,7 +19,6 @@ export default function Blogpost() {
 		fetchPost(blogId);
 	}, []);
 
-	console.log("deine mudda", post);
 
 	return (
 		<>

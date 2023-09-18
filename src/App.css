@@ -50,3 +50,24 @@
 .carousel-img {
 	filter: brightness(50%);
 }
+
+
+/* /////// marta  ///////// */
+
+* {
+	background-color: rgb(154, 61, 99);
+}
+
+.searchWindow {
+	border: 4px solid red;
+	font-size: larger;
+}
+
+.col-6 {
+	margin: auto;
+}
+
+
+
+
+/* /////// end of martas part  ///////// */

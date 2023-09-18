@@ -6,11 +6,14 @@ export default function Navbar() {
   return (
     <>
       <header className="header">
-        <div className="navbar-part">
-          <Navigation />
-        </div>
-        <div className="searchbar-part">
-          <Searchbar />
+        <div className="row d-flex justify-content-between align-items-center">
+          <div className="col-6">
+            <Navigation />
+          </div>
+
+          <div className="col-6">
+            <Searchbar />
+          </div>
         </div>
       </header>
     </>

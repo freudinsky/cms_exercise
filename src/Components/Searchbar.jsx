@@ -4,12 +4,12 @@ import { useState } from "react";
 const Searchbar = () => {
   const [searchInput, setSearchInput] = useState("");
 
-  const films = [
-    { name: "barbie", kinostart: "05.2023" },
-    { name: "spiderman", kinostart: "12.2024" },
-    { name: "winniePooh", kinostart: "11.2025" },
-    { name: "batman", kinostart: "09.2002" },
-  ];
+  // const films = [
+  //   { name: "barbie", kinostart: "05.2023" },
+  //   { name: "spiderman", kinostart: "12.2024" },
+  //   { name: "winniePooh", kinostart: "11.2025" },
+  //   { name: "batman", kinostart: "09.2002" },
+  // ];
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -24,15 +24,15 @@ const Searchbar = () => {
 
   return (
     <>
-      <div className="tabelle">
+      <div className="searchWindow">
         <input
           type="text"
-          placeholder="&#128270; Search "
+          placeholder=" &#128270; Search"
           onChange={handleSearch}
           value={searchInput}
         />
 
-        <table>
+        {/* <table>
           <tr>
             <th>Titel</th>
             <th>Kinostart</th>
@@ -44,9 +44,8 @@ const Searchbar = () => {
               <td>{films.kinostart}</td>
             </tr>;
           })}
-        </table>
+        </table> */}
       </div>
-      ;
     </>
   );
 };

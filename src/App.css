@@ -63,3 +63,41 @@
 		height: 400px;
 	}
 }
+
+
+/* /////// marta  ///////// */
+
+* {
+	background-color: rgb(154, 61, 99);
+}
+
+.searchWindow {
+	border: 4px solid red;
+	font-size: larger;
+}
+
+.col-6 {
+	margin: auto;
+}
+
+
+/* /////footer */
+
+
+  
+  .footer-icons {
+	font-size: 1.5em;
+	/* margin-left: 5%; */
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+  }
+  
+  .footer-icons .fa {
+	color: #fbd1cb;
+	text-decoration: none;
+  }
+  
+/* ////end of footer */
+
+/* /////// end of martas part  ///////// */

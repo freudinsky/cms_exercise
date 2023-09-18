@@ -1,33 +1,40 @@
-import React from "react";
+import { getSinglePost } from "../serivces/contentCall";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Blogpost() {
-  return (
-    <>
-      <div>
-        <h2 id="headline_block">{}</h2>
+	const [post, setPost] = useState([]);
+	const { blogId } = useParams();
 
-        <img id="img_block" src={d} />
+	useEffect(() => {
+		async function fetchPost(id) {
+			try {
+				const singlePost = await getSinglePost(id);
+				console.log("Fetched post:", singlePost); // Debugging: Log the fetched post
+				setPost(singlePost.items);
+			} catch (err) {
+				console.log("Error fetching post", err);
+			}
+		}
+		fetchPost(blogId);
+	}, []);
 
-        <p id="text_block">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-          erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-          et ea rebum.
-        </p>
-      </div>
-    </>
-  );
+
+	return (
+		<>
+			{post && post.length > 0 ? (
+				<div>
+					<img src={post[0].fields.imgUrl} alt="Post Image" />
+					<h2>{post[0].fields.heading}</h2>
+					<div>
+						{post[0].fields.postText.content.map((p) => (
+							<p key={crypto.randomUUID()}>{p.content[0].value}</p>
+						))}{" "}
+					</div>
+				</div>
+			) : (
+				" "
+			)}
+		</>
+	);
 }

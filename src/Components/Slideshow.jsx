@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
+import { limitWords } from "../serivces/service";
 
 export default function Slideshow({ posts }) {
 	const [index, setIndex] = useState(0);
@@ -10,14 +11,6 @@ export default function Slideshow({ posts }) {
 		setIndex(selectedIndex);
 	};
 	const postArr = posts.slice(0, 3);
-
-	function limitWords(text, limit) {
-		const words = text.split(" ");
-		if (words.length > limit) {
-			return words.slice(0, limit).join(" ") + "...";
-		}
-		return text;
-	}
 
 	return (
 		<Carousel activeIndex={index} onSelect={handleSelect} className="slider">

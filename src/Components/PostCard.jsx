@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
+import { limitWords } from "../serivces/service";
 
 export default function PostCard({ post }) {
-	function limitWords(text, limit) {
-		const words = text.split(" ");
-		if (words.length > limit) {
-			return words.slice(0, limit).join(" ") + "...";
-		}
-		return text;
-	}
+	
 	const limitedHeading = limitWords(post.fields.heading, 7);
 	const limitedText = limitWords(
 		post.fields.postText.content[0].content[0].value,

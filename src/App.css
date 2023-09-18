@@ -29,7 +29,7 @@
 	padding: 2em;
 	min-height: 500px;
 	max-height: 500px;
-	background-color: rgb(101, 101, 101) !important;
+	background-color: #ffb264b1 !important;
 	color: #f9f9f9 !important;
 }
 .card p,
@@ -48,7 +48,7 @@
 	object-position: center;
 }
 .carousel-img {
-	filter: brightness(35%);
+	opacity: 60%;
 }
 .carousel-caption {
 	text-shadow: 0 0 15px black;
@@ -60,11 +60,11 @@
 	object-fit: cover;
 	padding: 0;
 	position: relative;
-	filter: brightness(50%);
+	opacity: 60%;
 }
 .post-wrap {
 	width: 75%;
-	max-width: 1600px;
+	max-width: 1280px;
 	margin: 2rem auto;
 	text-align: left;
 	color: #f9f9f9;
@@ -120,7 +120,7 @@
 /* /////footer */
 .footer {
 	width: 90%;
-	max-width: 1600px;
+	max-width: 1280px;
 	display: flex;
 	justify-content: start;
 	align-items: center;

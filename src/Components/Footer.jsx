@@ -1,21 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-  return (
-    <>
-      <div class="footer">
-        <p>- footer -</p>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
+	return (
+		<>
+			<div class="footer">
+				<ul className="footernav">
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="#">Imprint</Link>
+					</li>
+					<li>
+						<Link to="#">Privacy note</Link>
+					</li>
+				</ul>
+				<ul class="footer-icons">
+					<li>
+						<a href="#" class="fa fa-facebook" id="fb-icon"></a>
+					</li>
 
-        <div class="footer-icons">
-          <a href="#" class="fa fa-facebook" id="fb-icon"></a>
-          <a href="#" class="fa fa-instagram" id="ig-icon"></a>
-          <a href="#" class="fa fa-youtube-play" id="youtube-icon"></a>
-        </div>
-      </div>
-    </>
-  );
+					<li>
+						<a href="#" class="fa fa-instagram" id="ig-icon"></a>
+					</li>
+					<li>
+						<a href="#" class="fa fa-youtube-play" id="youtube-icon"></a>
+					</li>
+				</ul>
+			</div>
+		</>
+	);
 }

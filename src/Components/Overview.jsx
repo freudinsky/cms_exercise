@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getPosts } from "../serivces/contentCall";
 import PostCard from "./PostCard";
 import Slideshow from "./Slideshow";
-import { Link } from "react-router-dom";
+
 
 export default function Overview() {
 	const [posts, setPosts] = useState([]);

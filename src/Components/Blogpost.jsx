@@ -19,19 +19,28 @@ export default function Blogpost() {
 		fetchPost(blogId);
 	}, []);
 
-
 	return (
 		<>
 			{post && post.length > 0 ? (
-				<div>
-					<img src={post[0].fields.imgUrl} alt="Post Image" />
-					<h2>{post[0].fields.heading}</h2>
-					<div>
-						{post[0].fields.postText.content.map((p) => (
-							<p key={crypto.randomUUID()}>{p.content[0].value}</p>
-						))}{" "}
+				<>
+					<div className="headingwrap">
+						<h2 className="post-heading">{post[0].fields.heading}</h2>
 					</div>
-				</div>
+					<img
+						className="post-img"
+						src={post[0].fields.imgUrl}
+						alt="Post Image"
+					/>
+					<div className="post-wrap">
+						<div className="post-text">
+							{post[0].fields.postText.content.map((p) => (
+								<p key={crypto.randomUUID()} className="post-p">
+									{p.content[0].value}
+								</p>
+							))}{" "}
+						</div>
+					</div>
+				</>
 			) : (
 				" "
 			)}

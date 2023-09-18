@@ -67,10 +67,6 @@
 
 /* /////// marta  ///////// */
 
-* {
-	background-color: rgb(154, 61, 99);
-}
-
 .searchWindow {
 	border: 4px solid red;
 	font-size: larger;
@@ -80,11 +76,8 @@
 	margin: auto;
 }
 
-
 /* /////footer */
 
-
-  
   .footer-icons {
 	font-size: 1.5em;
 	/* margin-left: 5%; */

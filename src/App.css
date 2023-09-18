@@ -136,17 +136,13 @@ nav ul {
 	color: rgb(234, 230, 233);
 	text-decoration: none;
 	font-family:monospace;
-	font-size: 180%;
+	font-size: 160%;
   }
   
   nav ul a:hover {
 	color: #e1c073;
 	transition: 0.3s;
   }
-
-
-
-
 /* /////// end of martas part  ///////// */
 
 /* /////footer */

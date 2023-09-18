@@ -26,6 +26,7 @@ const Searchbar = () => {
     <>
       <div className="searchWindow">
         <input
+          id="search"
           type="text"
           placeholder=" &#128270; Search"
           onChange={handleSearch}
@@ -34,8 +35,8 @@ const Searchbar = () => {
 
         {/* <table>
           <tr>
-            <th>Titel</th>
-            <th>Kinostart</th>
+            <th>Titel |</th>
+            <th>| Kinostart</th>
           </tr>
 
           {films.map((film, index) => {

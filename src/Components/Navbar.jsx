@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation";
-import Searchbar from "./Searchbar";
+import Searchbar2 from "./Searchbar2";
 
 export default function Navbar() {
   return (
@@ -12,7 +12,7 @@ export default function Navbar() {
           </div>
 
           <div className="col-6">
-            <Searchbar />
+            <Searchbar2 />
           </div>
         </div>
       </header>

@@ -32,13 +32,11 @@ export default function Blogpost() {
 						alt="Post Image"
 					/>
 					<div className="post-wrap">
-						<div className="post-text">
 							{post[0].fields.postText.content.map((p) => (
 								<p key={crypto.randomUUID()} className="post-p">
 									{p.content[0].value}
 								</p>
 							))}{" "}
-						</div>
 					</div>
 				</>
 			) : (

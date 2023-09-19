@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
       <header className="header">
-        <div className="row d-flex justify-content-between align-items-center">
+        <div className="nav-wrap">
           <div className="col-6">
             <Navigation />
           </div>

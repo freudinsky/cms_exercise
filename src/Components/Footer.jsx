@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <div class="footer">
+      <div className="footer">
         <ul className="footernav">
           <li>
             <Link to="/">Home</Link>
@@ -25,14 +25,14 @@ export default function Footer() {
 
         <ul className="footer-icons">
           <li>
-            <a href="#" class="fa fa-facebook" id="fb-icon"></a>
+            <a href="#" className="fa fa-facebook" id="fb-icon"></a>
           </li>
 
           <li>
-            <a href="#" class="fa fa-instagram" id="ig-icon"></a>
+            <a href="#" className="fa fa-instagram" id="ig-icon"></a>
           </li>
           <li>
-            <a href="#" class="fa fa-youtube-play" id="youtube-icon"></a>
+            <a href="#" className="fa fa-youtube-play" id="youtube-icon"></a>
           </li>
         </ul>
       </div>

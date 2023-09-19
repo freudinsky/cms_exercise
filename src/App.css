@@ -37,7 +37,7 @@
 	font-weight: 400;
 }
 .slider {
-	margin: 2.5rem 0;
+	margin: 0 0 2.5rem;
 	width: 100vw;
 }
 .carousel-img,
@@ -54,7 +54,7 @@
 	text-shadow: 0 0 15px black;
 }
 .post-img {
-	margin: 2rem 0;
+	margin: 0;
 	width: 100vw;
 	height: 600px;
 	object-fit: cover;
@@ -78,7 +78,7 @@
 	margin: 1rem 0 3rem;
 	position: absolute;
 	z-index: 2;
-	top: 625px;
+	top: 600px;
 	color: #f9f9f9;
 	text-shadow: 0 0 15px black;
 }
@@ -111,41 +111,49 @@
 .searchWindow {
 	font-size: larger;
 	text-align: end;
-	margin-right: 60px;
-	padding-bottom: 70px;
 }
 
 #search {
 	background-color: #e0c79e;
 }
-
-.header {
-	text-align: center;
-	margin: 50px;
+.home {
+	height: 2.8rem;
+	width: auto;
 }
-
+.header {
+	display: flex;
+	justify-content: space-around;
+	width: 90%;
+	max-width: 1280px;
+	margin: auto;
+}
+.nav-wrap {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
 nav ul {
 	display: flex;
 	justify-content: space-around;
-	padding: 30px;
+	align-items: center;
 	list-style: none;
-	width: 150%;
-  }
+	width: 100%;
+	margin: 1rem 0;
+}
 
-  nav ul a {
+nav ul a {
 	color: rgb(234, 230, 233);
 	text-decoration: none;
-	font-family:monospace;
-	font-size: 180%;
-  }
-  
-  nav ul a:hover {
+	font-family: monospace;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+nav ul a:hover {
 	color: #e1c073;
 	transition: 0.3s;
-  }
-
-
-
+}
 
 /* /////// end of martas part  ///////// */
 
@@ -182,11 +190,11 @@ nav ul {
 	align-items: center;
 	margin: 0;
 }
-.footernav li::after{
+.footernav li::after {
 	content: "|";
 	margin: 1.5rem;
 }
-.footernav li:last-child::after{
+.footernav li:last-child::after {
 	content: "";
 }
 .footer-icons .fa {
@@ -194,5 +202,3 @@ nav ul {
 	text-decoration: none;
 }
 /* ////end of footer */
-
-

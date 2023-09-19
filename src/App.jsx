@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import Overview from "./Components/Overview";
 import Blogpost from "./Components/Blogpost";
 import { Route, Routes } from "react-router-dom";
+import axios from "axios"
 
 function App() {
   const [hits, setHits] = useState([]);

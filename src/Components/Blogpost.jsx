@@ -10,7 +10,7 @@ export default function Blogpost() {
 		async function fetchPost(id) {
 			try {
 				const singlePost = await getSinglePost(id);
-				console.log("Fetched post:", singlePost); // Debugging: Log the fetched post
+				console.log("Fetched post:", singlePost);
 				setPost(singlePost.items);
 			} catch (err) {
 				console.log("Error fetching post", err);
@@ -36,7 +36,7 @@ export default function Blogpost() {
 								<p key={crypto.randomUUID()} className="post-p">
 									{p.content[0].value}
 								</p>
-							))}{" "}
+							))}
 					</div>
 				</>
 			) : (

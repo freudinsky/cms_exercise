@@ -6,16 +6,19 @@ import { ColorRing } from "react-loader-spinner";
 
 export default function SearchResults() {
 	const [results, setResults] = useState();
+	const [isLoading, setIsLoading] = useState(false);
 	const { search } = useParams();
 
 	useEffect(() => {
 		async function fetchSearch(q) {
+			setIsLoading(true);
 			try {
 				const post = await searchPosts(q);
 				setResults(post);
 			} catch (e) {
 				console.log("Error fetching posts", e);
 			}
+			setIsLoading(false);
 		}
 		if (search) {
 			fetchSearch(search);
@@ -25,10 +28,12 @@ export default function SearchResults() {
 	return (
 		<>
 			<div className="card-container searchres-cont">
-            <h2 className="search-heading">Search Results for "{search}":</h2>
-				{results ? (
-					results.map((post) => <PostCard key={post.postID} post={post} />)
+				{results && results.length > 0 ? (
+					<h2 className="search-heading">Search Results for "{search}":</h2>
 				) : (
+					<h2 className="search-heading">No Results for "{search}"</h2>
+				)}
+				{isLoading ? (
 					<ColorRing
 						visible={true}
 						height="80"
@@ -38,6 +43,10 @@ export default function SearchResults() {
 						wrapperClass="blocks-wrapper"
 						colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
 					/>
+				) : results && results.length > 0 ? (
+					results.map((post) => <PostCard key={post.postID} post={post} />)
+				) : (
+					""
 				)}
 			</div>
 		</>

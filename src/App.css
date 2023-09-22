@@ -84,9 +84,11 @@
 	color: #f9f9f9;
 	text-shadow: 0 0 15px black;
 }
-
+.no-res{
+	color: white;
+}
 .searchres-cont {
-	margin: 5rem auto;
+	margin: 7rem auto;
 }
 .search-heading {
 	color: #f9f9f9;

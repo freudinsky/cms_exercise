@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export async function getPosts() {
 	try {
 		const res = await axios.get("https://cms-api-o0i7.onrender.com/api/");
@@ -17,7 +16,9 @@ export async function getPosts() {
 
 export async function getSinglePost(id) {
 	try {
-		const res = await axios.get(`https://cms-api-o0i7.onrender.com/api/post/${id}`);
+		const res = await axios.get(
+			`https://cms-api-o0i7.onrender.com/api/post/${id}`
+		);
 		if (res.status === 200) {
 			const posts = await res.data;
 			return posts;

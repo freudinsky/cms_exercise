@@ -4,18 +4,18 @@ import Searchbar from "./Searchbar";
 
 export default function Navbar() {
   return (
-    <>
-      <header className="header">
-        <div className="nav-wrap">
-          <div className="col-6">
-            <Navigation />
-          </div>
+		<>
+			<header className="header">
+				<div className="nav-wrap">
+					<div className="col-md-6 col-12">
+						<Navigation />
+					</div>
 
-          <div className="col-6">
-            <Searchbar />
-          </div>
-        </div>
-      </header>
-    </>
-  );
+					<div className="col-md-6 col-12">
+						<Searchbar />
+					</div>
+				</div>
+			</header>
+		</>
+	);
 }

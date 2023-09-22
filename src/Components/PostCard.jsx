@@ -2,20 +2,20 @@ import { Link } from "react-router-dom";
 import { limitWords } from "../serivces/service";
 
 export default function PostCard({ post }) {
-  const limitedHeading = limitWords(post.fields.heading, 7);
+  const limitedHeading = limitWords(post.postTitle, 7);
   const limitedText = limitWords(
-    post.fields.postText.content[0].content[0].value,
+    post.postText,
     20
   );
 
   return (
     <>
-      <Link to={`/post/${post.sys.id}`} className="card-link">
+      <Link to={`/post/${post.postID}`} className="card-link">
         <div className="card text-center">
           <img
-            src={post.fields.imgUrl}
+            src={post.postImg}
             className="card-img-top"
-            alt={post.fields.heading}
+            alt={post.postTitle}
           />
           <div className="card-body">
             <h5 className="card-title">{limitedHeading}</h5>

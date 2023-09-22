@@ -1,33 +1,34 @@
 import React from "react";
 import { useState } from "react";
-import { getPosts } from "../serivces/contentCall";
+import { useNavigate } from "react-router-dom";
 
 const Searchbar = () => {
   const [searchInput, setSearchInput] = useState("");
+  const nav = useNavigate()
 
-  const handleSearch = (e) => {
-    e.preventDefault();
+  const handleInput = (e) => {
     setSearchInput(e.target.value);
   };
 
-  if (searchInput.length > 0) {
-    films.filter((film) => {
-      return film.name.match(searchInput);
-    });
+  function handleSearch(e){
+    e.preventDefault();
+    nav(`/search/${searchInput}`)
   }
 
   return (
-    <>
-      <div className="searchWindow">
-        <input
-          id="search"
-          type="text"
-          placeholder=" &#128270; Search"
-          onChange={handleSearch}
-          value={searchInput}
-        />
-      </div>
-    </>
-  );
+		<>
+			<div className="searchWindow">
+				<form onSubmit={handleSearch}>
+					<input
+						id="search"
+						type="text"
+						placeholder=" &#128270; Search"
+						onChange={handleInput}
+						value={searchInput}
+					/>
+				</form>
+			</div>
+		</>
+	);
 };
 export default Searchbar;

@@ -15,14 +15,14 @@ export default function Slideshow({ posts }) {
 	return (
 		<Carousel activeIndex={index} onSelect={handleSelect} className="slider">
 			{postArr.map((post) => (
-				<Carousel.Item key={post.sys.id} className="carousel-item">
-					<Link to={`/post/${post.sys.id}`}>
-						<img className="carousel-img" src={post.fields.imgUrl} />
+				<Carousel.Item key={post.postID} className="carousel-item">
+					<Link to={`/post/${post.postID}`}>
+						<img className="carousel-img" src={post.postImg} />
 						<Carousel.Caption className="carousel-caption">
-							<h3>{limitWords(post.fields.heading, 15)}</h3>
+							<h3>{limitWords(post.postTitle, 15)}</h3>
 							<p>
 								{limitWords(
-									post.fields.postText.content[0].content[0].value,
+									post.postText,
 									30
 								)}
 							</p>

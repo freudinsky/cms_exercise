@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 import Searchbar from "./Searchbar";
 
 export default function Navbar() {
-  return (
+	return (
 		<>
 			<header className="header">
 				<div className="nav-wrap">

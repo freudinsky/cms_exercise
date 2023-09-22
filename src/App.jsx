@@ -13,11 +13,13 @@ function App() {
   return (
 		<>
 			<Navbar />
-			<Routes>
-				<Route path="/" element={<Overview />} />
-				<Route path="/search/:search" element={<SearchResults />} />
-				<Route path="/post/:blogId" element={<Blogpost />} />
-			</Routes>
+			<div className="appwrap">
+				<Routes>
+					<Route path="/" element={<Overview />} />
+					<Route path="/search/:search" element={<SearchResults />} />
+					<Route path="/post/:blogId" element={<Blogpost />} />
+				</Routes>
+			</div>
 			<Footer />
 		</>
 	);

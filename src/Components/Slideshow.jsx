@@ -19,13 +19,10 @@ export default function Slideshow({ posts }) {
 					<Link to={`/post/${post.postID}`}>
 						<img className="carousel-img" src={post.postImg} />
 						<Carousel.Caption className="carousel-caption">
-							<h3>{limitWords(post.postTitle, 15)}</h3>
-							<p>
-								{limitWords(
-									post.postText,
-									30
-								)}
-							</p>
+							<div className="car-cap">
+								<h3>{limitWords(post.postTitle, 15)}</h3>
+								<p>{limitWords(post.postText, 30)}</p>
+							</div>
 						</Carousel.Caption>
 					</Link>
 				</Carousel.Item>

@@ -95,6 +95,18 @@
 	text-align: left;
 	width: 100%;
 }
+.carousel-caption{
+	background-color: rgba(7, 7, 7, 0.6);
+	padding: 0.75rem;
+	width: 100%;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	padding-bottom: 2rem !important;
+}
+.car-cap{
+	width: 75%;margin: auto;
+}
 
 /* /////// marta  ///////// */
 

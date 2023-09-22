@@ -20,8 +20,8 @@
 	margin: auto;
 	margin-bottom: 2rem;
 }
-.loader, .blocks-wrapper{
-	margin-top: 10vh;
+.blocks-wrapper{
+	margin-top: 20vh;
 }
 .card-link {
 	width: 32%;
@@ -121,6 +121,7 @@
 #search {
 	background-color: #e0c79e;
 	height: 2.75rem;
+	text-indent: 0.75rem;
 }
 .home {
 	height: 2.8rem;
@@ -213,6 +214,9 @@ nav ul a:hover {
 }
 /* ////end of footer */
 @media (max-width: 500px) {
+	.header{
+		position: relative;
+	}
 	.nav-wrap {
 		flex-direction: column;
 		justify-content: center;
@@ -221,13 +225,17 @@ nav ul a:hover {
 	}
 	.nav-wrap ul {
 		padding: 0;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 	}
 	.nav-wrap form {
 		text-align: center;
 	}
 	#search {
 		width: 90%;
+		margin-bottom: 1rem;
+	}
+	.searchres-cont{
+		margin-top: 2rem;
 	}
 	.card-link {
 		width: 90%;

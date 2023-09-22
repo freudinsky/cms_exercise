@@ -22,7 +22,7 @@ export default function Overview() {
 
 	return (
 		<>
-			<Slideshow posts={posts} />
+			{ posts.length >0 ? <Slideshow posts={posts} /> : ""}
 			<div className="card-container">
 				{posts.length > 0 ? (
 					posts.map((post) => <PostCard key={post.postID} post={post} />)

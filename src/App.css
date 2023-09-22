@@ -20,6 +20,9 @@
 	margin: auto;
 	margin-bottom: 2rem;
 }
+.loader, .blocks-wrapper{
+	margin-top: 10vh;
+}
 .card-link {
 	width: 32%;
 }

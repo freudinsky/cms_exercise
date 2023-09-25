@@ -16,7 +16,7 @@ function App() {
 			<div className="appwrap">
 				<Routes>
 					<Route path="/" element={<Overview />} />
-					<Route path="/search/:search" element={<SearchResults />} />
+					<Route path="/search" element={<SearchResults />} />
 					<Route path="/post/:blogId" element={<Blogpost />} />
 				</Routes>
 			</div>

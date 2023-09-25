@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { searchPosts } from "../serivces/contentCall";
 import PostCard from "./PostCard";
 import { ColorRing } from "react-loader-spinner";
+import { useLocation } from "react-router-dom";
 
 export default function SearchResults() {
 	const [results, setResults] = useState();
 	const [isLoading, setIsLoading] = useState(false);
-	const { search } = useParams();
+	const location = useLocation();
+	const queryParams = new URLSearchParams(location.search);
+	const query = queryParams.get("query");
 
 	useEffect(() => {
 		async function fetchSearch(q) {
@@ -20,18 +22,18 @@ export default function SearchResults() {
 			}
 			setIsLoading(false);
 		}
-		if (search) {
-			fetchSearch(search);
+		if (query) {
+			fetchSearch(query);
 		}
-	}, [search]);
+	}, [query]);
 
 	return (
 		<>
 			<div className="card-container searchres-cont">
 				{results && results.length > 0 ? (
-					<h2 className="search-heading">Search Results for "{search}":</h2>
+					<h2 className="search-heading">Search Results for "{query}":</h2>
 				) : (
-					<h2 className="search-heading">No Results for "{search}"</h2>
+					<h2 className="search-heading">No Results for "{query}"</h2>
 				)}
 				{isLoading ? (
 					<ColorRing

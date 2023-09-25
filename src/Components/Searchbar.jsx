@@ -12,7 +12,7 @@ const Searchbar = () => {
 
   function handleSearch(e){
     e.preventDefault();
-    nav(`/search/${searchInput}`)
+    nav(`/search?query=${encodeURIComponent(searchInput)}`);
   }
 
   return (
